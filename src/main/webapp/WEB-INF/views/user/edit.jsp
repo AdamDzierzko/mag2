@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-lg-6">
 
-                            <form:form method="post" modelAttribute="user">
+                            <form:form method="post" modelAttribute="users">
                                 <%@include file="user_form.jsp" %>
                             </form:form>
 

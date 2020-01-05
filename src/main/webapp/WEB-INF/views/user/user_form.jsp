@@ -1,4 +1,4 @@
-<%@ taglib prefix="for" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <div class="form-group">
     <form:hidden path="id"/>
