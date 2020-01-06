@@ -19,14 +19,14 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
 
     @NotBlank
     @Size(max = 50)
     @Column(length = 50, unique = true)
     private String name;
 
-	public User(int id, String name) {
+	public User(long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -36,7 +36,7 @@ public class User {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
