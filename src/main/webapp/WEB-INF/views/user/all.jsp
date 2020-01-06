@@ -65,25 +65,27 @@
         </button>
       </div>
       <div class="modal-body">
-  <form:form method="post" modelAttribute="users"> 
-  			<div class="form-group">
-				<form:hidden path="id" id="id" name="id"/> 
-		    	<label for="name" id="name">Name</label>
-		    	<form:input path="name" class="form-control"/>
-		    	<p class="form-group has-error">
-		        	<p class="error control-label help-block"></p>
-		    	<p/>
-			</div>        
-			</div>
+			<form>
+				<input type="hidden" id="id" name="id">
+				<label for="name" id="name">Name</label>
+				<input type="text" id="name" name="name">
+
+
+			</form>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
-        <button type="submit" class="btn btn-primary" id="btnSaveEdit">Save changes</button>
-  </form:form>   
+        <button type="button" class="btn btn-primary" id="btnSaveEdit">Save changes</button>
+  
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+
+</script>
 
 
 <%@include file="../tableFooter.jsp" %>
