@@ -40,8 +40,9 @@
                                     <a href="/user/delete/${user.id}">Delete</a>
                                     <span> / </span>
                                     <a href="/user/edit/${user.id}">Editaaaa</a>
-                                      <button type="button" class="btn btn-primary" data-id="${user.id}" data-toggle="modal" data-target="#myModal">Modal</button>
-                                    
+                                    <div class="passingID" data-id="${user.id}">
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal</button>
+                                    </div>
                                 </td>
                             </tr>
                             </c:forEach>                     
@@ -70,9 +71,9 @@
       </div>
       <div class="modal-body">
 			<form id="user">
-				<input type="hidden" id="id" name="id">
+				<input type="hidden" id="ida" name="id" value='11'>
 				<label for="name" id="name">Name</label>
-				<input type="text" id="name" name="name">
+				<input type="text" id="namea" name="name">
 
 			 </form> 
 			
@@ -89,14 +90,20 @@
   </div>
 </div>
 
-  			<script>
-$('#btnSaveEdit').click(function() 
-		{
-		var a = 11
-		var id = $('#id').val();
-		var name = $('#name').val();
-		alert(name)
-		})
-</script> 
+  	<script>
+  	$(".passingID").click(function () {
+  	    var ids = $(this).attr('data-id');
+  	    $("#ida").val( ids );
+  	});
+  	
+  	$('#btnSaveEdit').click(function () {
+  		         
+  		var id = $('#ida').val();
+  	  	var name = $('#namea').val();
+  	  	
+    	   alert(name + ' ' + id);
+  	});
+  	
+  	</script>
 
 <%@include file="../tableFooter.jsp" %>
