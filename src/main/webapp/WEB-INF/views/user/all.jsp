@@ -8,7 +8,21 @@
 
 <%@include file="../tableHeader.jsp" %>
 
+<script type="text/javascript">
 
+	$(document).ready(function() {
+		//alert("good")
+		$('#id_get_time').click(function() {
+//			alert('naciśnięty')
+			$.ajax({
+				url : '/user/gettime',
+				success : function (data) {
+					$("#id_time").html(data);
+					}
+				});
+			});
+		});
+</script>
 <div id="page-wrapper" style="min-height: 474px;">
     <div class="row">
         <div class="col-lg-12">
@@ -49,6 +63,8 @@
                         
                         </tbody>
                     </table>
+                    <button id="id_get_time"> Get date</button>
+                    <p id="id_time"></p>
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -58,6 +74,8 @@
     </div>
 </div>
 <!-- /#page-wrapper -->
+
+<button id="id_get_time"> Get date</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">

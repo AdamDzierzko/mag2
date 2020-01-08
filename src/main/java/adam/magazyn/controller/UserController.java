@@ -1,8 +1,10 @@
 package adam.magazyn.controller;
 
-import adam.magazyn.service.UserService;
-import lombok.extern.java.Log;
-import adam.magazyn.entity.User;
+import java.util.Date;
+
+import javax.validation.Valid;
+import javax.validation.Validator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,10 +13,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.validation.Valid;
-import javax.validation.Validator;
+import adam.magazyn.entity.User;
+import adam.magazyn.service.UserService;
+import lombok.extern.java.Log;
 
 @Controller
 @RequestMapping("/user")
@@ -30,6 +33,19 @@ public class UserController {
     @Autowired
     Validator validator;
 
+    @RequestMapping("/test")
+    public String TestPage () {
+    	return "user/all";
+    }
+    
+    @RequestMapping("/gettime")
+    @ResponseBody
+    public String getServerTime () {
+    	System.out.println("-----------getServerTime-----------");
+    	Date d = new Date();
+    	return d.toString();
+    }
+    
     @GetMapping("/add")
     public String addNew(Model model) {
         model.addAttribute("user", new User());
