@@ -122,13 +122,17 @@
  	  	var formData  = $("#user").serialize();
   	  	
     	alert(formData);
-/*
+
 		$.ajax({
-			type : "post"
+			type : "POST"
 			url : "/user/edit/",
+//			contentType : 'application/json'
 //			data : formData
+        success : function(data) {
+            doAjax();
+        }			
 			});
- */   	
+    	
   	});
   	
   	</script>

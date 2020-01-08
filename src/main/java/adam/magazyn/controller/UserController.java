@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -90,7 +91,7 @@ public class UserController {
         model.addAttribute("user", userService.findOne(id));
         return "user/edit";
     }
-
+/*
     @PostMapping("/edit/*")
     public String editPerform(@Valid User user, BindingResult result) {
 
@@ -101,4 +102,12 @@ public class UserController {
         userService.save(user);
         return "redirect:/user/all";
     }
+    */
+    
+    @PostMapping("/edit/")
+    public void editPerform() {
+    	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+    	
+    }
+    
 }
