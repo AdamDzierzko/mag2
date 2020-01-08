@@ -119,7 +119,16 @@
   		var id = $('#ida').val();
   	  	var name = $('#namea').val();
   	  	
-    	   alert(name + ' ' + id);
+ //   	alert(name + ' ' + id);
+
+		$.ajax({
+			url : "/user/gettime",
+			success : function (data) {
+//				$("#id_time").html(data);
+				alert(data)
+				}
+			});
+    	
   	});
   	
   	</script>
