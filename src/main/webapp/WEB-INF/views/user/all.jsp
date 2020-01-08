@@ -89,9 +89,9 @@
       </div>
       <div class="modal-body">
 			<form id="user">
-				<input type="hidden" id="ida" name="id" value='11'>
+				<input  type="hidden" id="ida" name="id"/>
 				<label for="name" id="name">Name</label>
-				<input type="text" id="namea" name="name">
+				<input   type="text" id="namea" name="name"/>
 
 			 </form> 
 			
@@ -118,17 +118,17 @@
   		         
   		var id = $('#ida').val();
   	  	var name = $('#namea').val();
-  	  	
- //   	alert(name + ' ' + id);
 
+ 	  	var formData  = $("#user").serialize();
+  	  	
+    	alert(formData);
+/*
 		$.ajax({
-			url : "/user/gettime",
-			success : function (data) {
-//				$("#id_time").html(data);
-				alert(data)
-				}
+			type : "post"
+			url : "/user/edit/",
+//			data : formData
 			});
-    	
+ */   	
   	});
   	
   	</script>

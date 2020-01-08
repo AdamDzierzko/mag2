@@ -85,6 +85,8 @@ public class UserController {
 
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable Long id) {
+    	System.out.println("-----------edit-id-----------");
+
         model.addAttribute("user", userService.findOne(id));
         return "user/edit";
     }
