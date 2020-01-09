@@ -149,8 +149,9 @@ $(document).ready(function() {
 				id : id,
 				name : name
 				}
- //       success : function() { alert("ajax") }
-		});
+
+		})
+	      .always(function() { $('#myModal').modal('hide'); }	)	
   	});
   	
   	</script>

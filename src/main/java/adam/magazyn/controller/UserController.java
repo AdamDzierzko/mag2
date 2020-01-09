@@ -93,19 +93,15 @@ public class UserController {
         model.addAttribute("user", userService.findOne(id));
         return "user/edit";
     }
-    //   @PostMapping("/edit/")
-    @RequestMapping(value = "/ed", method = RequestMethod.POST)
-//    public String editPerform(@RequestParam long id, @RequestParam String name) {
-    public String editPerform(Model model, @Valid User user, @RequestParam long id, BindingResult result) {
-   	
-//    	System.out.println(user);
+    @PostMapping("/ed")
+    public void editPerform(Model model, @Valid User user, @RequestParam long id, BindingResult result) {
 
  //       if (result.hasErrors()) {
  //           return "user/edit";
  //       }
     	model.addAttribute("user", userService.findOne(id));
         userService.save(user);
-        return "redirect:/user/all";
+//        return "redirect:/user/all";
     }
     
     /*
