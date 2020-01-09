@@ -121,7 +121,6 @@ $(document).ready(function() {
   	$(".passingID").click(function () {
   	    var ids = $(this).attr('data-id');
   	    $("#ida").val( ids );
-  	    console.log("sdfsdf")
   	});
   	
   	$('#btnSaveEdit').click(function () {
@@ -130,15 +129,7 @@ $(document).ready(function() {
   	  	var name = $('#namea').val();
 
 // 	  	var formData  = $("#user").serialize();
-  	  	
-//    	alert(formData);
-/*
- 
-		$var data = {}
- 		data["id"] = $('#ida').val();
- 		data["name"] = $('#namea').val();
- 		alert(data)
- */		
+  	  		
 		$.ajax({
 			type : "POST",
 			url : "/user/ed",
@@ -149,7 +140,6 @@ $(document).ready(function() {
 				id : id,
 				name : name
 				}
-
 		})
 	      .always(function() { $('#myModal').modal('hide'); }	)	
   	});
