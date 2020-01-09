@@ -118,12 +118,12 @@ $(document).ready(function() {
 </div>
 
   	<script>
-  	$(".passingID").click(function () {
+  	$(".passingID").click(function () {        //hidden z formularza aby id pozstał bez zmian
   	    var ids = $(this).attr('data-id');
   	    $("#ida").val( ids );
   	});
   	
-  	$('#btnSaveEdit').click(function () {
+  	$('#btnSaveEdit').click(function () {	// wysłanie danych do controllera
   		         
   		var id = $('#ida').val();
   	  	var name = $('#namea').val();
