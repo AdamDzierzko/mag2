@@ -10,18 +10,26 @@
 
 <script type="text/javascript">
 
-	$(document).ready(function() {
-		//alert("good")
-		$('#id_get_time').click(function() {
-//			alert('naciśnięty')
-			$.ajax({
-				url : '/user/gettime',
-				success : function (data) {
-					$("#id_time").html(data);
-					}
-				});
+$(document).ready(function() {
+	//alert("good")
+	$('#id_get_time').click(function() {
+//		alert('naciśnięty')
+/*			var a = 5;
+		var b = "ad"
+		var data = {}
+		data["id"] = a
+		data["name"] = b
+		*/
+		
+		$.ajax({
+			url : '/user/gettime',
+			type: "post",
+			success : function (data) {
+				$("#id_time").html(data);
+				}
 			});
 		});
+	});
 </script>
 <div id="page-wrapper" style="min-height: 474px;">
     <div class="row">
@@ -43,13 +51,14 @@
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
+                            <th>Delete / Edit</th>
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${users}" var="user">
                             <tr>
                                 <td>${user.id}</td>
-                                <td>${user.name}</td>
+                                <td>${user.name}</td>    
                                 <td>
                                     <a href="/user/delete/${user.id}">Delete</a>
                                     <span> / </span>
@@ -112,6 +121,7 @@
   	$(".passingID").click(function () {
   	    var ids = $(this).attr('data-id');
   	    $("#ida").val( ids );
+  	    console.log("sdfsdf")
   	});
   	
   	$('#btnSaveEdit').click(function () {
@@ -119,20 +129,28 @@
   		var id = $('#ida').val();
   	  	var name = $('#namea').val();
 
- 	  	var formData  = $("#user").serialize();
+// 	  	var formData  = $("#user").serialize();
   	  	
-    	alert(formData);
-
+//    	alert(formData);
+/*
+ 
+		$var data = {}
+ 		data["id"] = $('#ida').val();
+ 		data["name"] = $('#namea').val();
+ 		alert(data)
+ */		
 		$.ajax({
-			type : "POST"
-			url : "/user/edit/",
-//			contentType : 'application/json'
-//			data : formData
-        success : function(data) {
-            doAjax();
-        }			
-			});
-    	
+			type : "POST",
+			url : "/user/ed",
+//			contentType : 'application/json',
+//			data : JSON.stringify(data),
+//			dataType: 'json',
+			data : {
+				id : id,
+				name : name
+				}
+ //       success : function() { alert("ajax") }
+		});
   	});
   	
   	</script>

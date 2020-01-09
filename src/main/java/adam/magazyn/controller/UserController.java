@@ -12,10 +12,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import adam.magazyn.entity.Czesci;
 import adam.magazyn.entity.User;
 import adam.magazyn.service.UserService;
 import lombok.extern.java.Log;
@@ -39,9 +41,9 @@ public class UserController {
     	return "user/all";
     }
     
-    @RequestMapping("/gettime")
+    @PostMapping("/gettime")
     @ResponseBody
-    public String getServerTime () {
+    public String getServerTime (@RequestParam long id) {
     	System.out.println("-----------getServerTime-----------");
     	Date d = new Date();
     	return d.toString();
@@ -91,23 +93,32 @@ public class UserController {
         model.addAttribute("user", userService.findOne(id));
         return "user/edit";
     }
-/*
+    //   @PostMapping("/edit/")
+    @RequestMapping(value = "/ed", method = RequestMethod.POST)
+//    public String editPerform(@RequestParam long id, @RequestParam String name) {
+    public String editPerform(Model model, @Valid User user, @RequestParam long id, BindingResult result) {
+   	
+//    	System.out.println(user);
+
+ //       if (result.hasErrors()) {
+ //           return "user/edit";
+ //       }
+    	model.addAttribute("user", userService.findOne(id));
+        userService.save(user);
+        return "redirect:/user/all";
+    }
+    
+    /*
     @PostMapping("/edit/*")
     public String editPerform(@Valid User user, BindingResult result) {
-
+    	
+    	System.out.println("aaaaaaaaaaaaaaaaaaaaaaa");
         if (result.hasErrors()) {
             return "user/edit";
         }
-
         userService.save(user);
         return "redirect:/user/all";
     }
     */
-    
-    @PostMapping("/edit/")
-    public void editPerform() {
-    	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-    	
-    }
     
 }
