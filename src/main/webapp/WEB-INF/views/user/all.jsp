@@ -141,7 +141,9 @@ $(document).ready(function() {
 				name : name
 				}
 		})
-	      .always(function() { $('#myModal').modal('hide'); }	)	
+	      .always(function() { $('#myModal').modal('hide'); 
+	      window.location.reload()		// przeladuje strone
+	      }	)	
   	});
  	
   	</script>
