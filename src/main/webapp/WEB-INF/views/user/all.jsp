@@ -143,7 +143,7 @@ $(document).ready(function() {
 		})
 	      .always(function() { $('#myModal').modal('hide'); }	)	
   	});
-  	
+ 	
   	</script>
 
 <%@include file="../tableFooter.jsp" %>
