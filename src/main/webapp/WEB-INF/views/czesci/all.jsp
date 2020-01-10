@@ -43,6 +43,9 @@
                                     <a href="/czesci/delete/${czesci.id}">Delete</a>
                                     <span> / </span>
                                     <a href="/czesci/edit/${czesci.id}">Edit</a>
+                                    <div class="passingID" data-id="${czesci.id}">
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal</button>
+                                    </div>
                                 </td>
                                 <td><a href="/czesci/zmiana/${czesci.id}">Zmiana ilosci</a>
                                 </td>
@@ -59,5 +62,38 @@
     </div>
 </div>
 <!-- /#page-wrapper -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle"><i class="fa fa-edit fa-fw"></i> Zmień nazwę użytkownika </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<form id="user">
+				<input  type="hidden" id="ida" name="id"/>
+				<label for="name" id="name">Name</label>
+				<input   type="text" id="namea" name="name"/>
+				
+				
+
+			 </form> 
+			
+			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>
+			
+			
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+        <button type="button" class="btn btn-primary" id="btnSaveEdit">Save changes</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%@include file="../tableFooter.jsp" %>
