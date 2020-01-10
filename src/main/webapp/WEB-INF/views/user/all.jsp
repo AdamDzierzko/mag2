@@ -132,7 +132,7 @@ $(document).ready(function() {
   	  		
 		$.ajax({
 			type : "POST",
-			url : "/user/ed",
+			url : "/user/edit",
 //			contentType : 'application/json',
 //			data : JSON.stringify(data),
 //			dataType: 'json',

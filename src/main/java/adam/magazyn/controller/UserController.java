@@ -85,15 +85,16 @@ public class UserController {
         userService.delete(id);
         return "redirect:/user/all";
     }
-
+/*
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable Long id) {
     	System.out.println("-----------edit-id-----------");
 
         model.addAttribute("user", userService.findOne(id));
         return "user/edit";
-    }
-    @PostMapping("/ed")
+    }  */
+    
+    @PostMapping("/edit")
     public void editPerform(Model model, @Valid User user, @RequestParam long id, BindingResult result) {
 
  //       if (result.hasErrors()) {
@@ -101,7 +102,6 @@ public class UserController {
  //       }
     	model.addAttribute("user", userService.findOne(id));
         userService.save(user);
-//        return "redirect:/user/all";
     }
     
     /*
