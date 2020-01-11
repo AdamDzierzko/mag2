@@ -74,6 +74,7 @@
         </button>
       </div>
       <div class="modal-body">
+      <c:forEach items="${czesci}" var="czesci">
 			<form id="user">
 				<input  type="hidden" id="ida" name="id"/>
 				<label for="name" id="name">Name</label>
@@ -88,12 +89,12 @@
 				<input type="text" id="iloscc" name="iloscc"/>
 				
 				<label for="userc" id="userc">Uzytkownik</label>
-    			<select itemLabel="name" cssClass="form-control" items="${users}"/>
+    			<select itemLabel="name" cssClass="form-control" items="${users}"></select>
 				
 				<label path="typCzesci">Typ czesci<label>
     			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
 			 </form> 
-			
+			</c:forEach>
 			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>
 			
 			
