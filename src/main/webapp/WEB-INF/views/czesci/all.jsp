@@ -80,7 +80,18 @@
 				<input   type="text" id="namea" name="name"/>
 				
 				
-
+				<input  type="hidden" id="idc" name="id"/>
+				<label for="nazwa" id="nazwa">Nazwa</label>
+				<input type="text" id="nazwac" name="nazwa"/>
+				
+				<label for="iloscc" id="iloscc">Ilosc</label>
+				<input type="text" id="iloscc" name="iloscc"/>
+				
+				<label for="userc" id="userc">Uzytkownik</label>
+    			<select itemLabel="name" path="user" cssClass="form-control" items="${users}"/>
+				
+				<label path="typCzesci">Typ czesci<label>
+    			<form:select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
 			 </form> 
 			
 			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>
