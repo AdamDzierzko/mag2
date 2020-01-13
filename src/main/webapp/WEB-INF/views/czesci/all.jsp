@@ -110,4 +110,33 @@
   </div>
 </div>
 
+  	<script>
+  	$(".passingID").click(function () {        //hidden z formularza aby id pozstał bez zmian
+//  	    var ids = $(this).attr('data-id');
+//  	    $("#ida").val( ids );
+  	});
+  	
+  	$('#btnSaveEdit').click(function () {	// wysłanie danych do controllera
+  		         
+  		var id = $('#ida').val();
+  	  	var name = $('#namea').val();
+		alert("aaaaaaaaaaaa")
+// 	  	var formData  = $("#user").serialize();
+  	  		
+		$.ajax({
+			type : "POST",
+			url : "/user/edit",
+//			contentType : 'application/json',
+//			data : JSON.stringify(data),
+//			dataType: 'json',
+			data : {
+				id : id,
+				name : name
+				}
+		})
+	      .always(function() { $('#myModal').modal('hide'); 
+	      window.location.reload()		// przeladuje strone
+	      }	)	
+  	});
+
 <%@include file="../tableFooter.jsp" %>
