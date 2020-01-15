@@ -96,8 +96,7 @@
 			 </form> 
 			</c:forEach>
 					
-			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>
-			
+			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>		
 	
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
