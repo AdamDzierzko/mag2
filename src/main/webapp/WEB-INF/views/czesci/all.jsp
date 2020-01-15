@@ -95,9 +95,7 @@
     			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
 			 </form> 
 			</c:forEach>
-			
-
-			
+					
 			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>
 			
 	
