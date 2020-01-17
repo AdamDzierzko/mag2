@@ -63,6 +63,9 @@
 </div>
 <!-- /#page-wrapper -->
 
+// integracja z maven
+// konieczny form z taglib
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
