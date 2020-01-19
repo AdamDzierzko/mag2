@@ -67,7 +67,7 @@
 // konieczny form z taglib
 // skonfigurać z maven 
 // configure -> convert to maven project
-// form z c: rozbudowany
+// form z c: rozbudowany skierowanie do entity
 
 
 <!-- Modal -->
