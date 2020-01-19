@@ -67,6 +67,7 @@
 // konieczny form z taglib
 // skonfigurać z maven 
 // configure -> convert to maven project
+//
 
 
 <!-- Modal -->
