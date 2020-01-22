@@ -69,7 +69,7 @@
 // configure -> convert to maven project
 // form z c: rozbudowany skierowanie do entity
 //
-
+//
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
