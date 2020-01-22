@@ -70,7 +70,7 @@
 // form z c: rozbudowany skierowanie do entity
 // import z 
 // https://www.youtube.com/watch?v=-PiXr5Emtd0
-//
+// https://www.youtube.com/watch?v=-PiXr5Emtd0
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
