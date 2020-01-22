@@ -68,7 +68,8 @@
 // skonfigurać z maven 
 // configure -> convert to maven project
 // form z c: rozbudowany skierowanie do entity
-//
+// import z 
+// https://www.youtube.com/watch?v=-PiXr5Emtd0
 //
 
 <!-- Modal -->
