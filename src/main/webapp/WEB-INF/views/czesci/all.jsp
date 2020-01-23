@@ -76,6 +76,7 @@
 // java home C:\Program Files\Java\jdk1.8.0_171
 // catalina home C:\servers\apache-tomcat-8.0.52
 // maven home C:\Software\maven
+// path C:\Program Files\Java\jdk1.8.0_171 C:\Program Files\Java\jdk1.8.0_144\bin
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
