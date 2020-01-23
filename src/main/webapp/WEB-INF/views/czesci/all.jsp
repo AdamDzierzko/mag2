@@ -72,6 +72,7 @@
 // https://www.youtube.com/watch?v=-PiXr5Emtd0
 // https://www.youtube.com/watch?v=-PiXr5Emtd0
 // pobranie jdk 1.8 - 231
+// path %MAVEN_HOME%\bin
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
