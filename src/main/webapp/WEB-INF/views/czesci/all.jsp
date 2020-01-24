@@ -78,6 +78,7 @@
 // maven home C:\Software\maven
 // path C:\Program Files\Java\jdk1.8.0_171 C:\Program Files\Java\jdk1.8.0_144\bin
 // repository https://github.com/AdamDzierzko/mag2.git
+// magazyn[master] - c:\magazyn\.git
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
