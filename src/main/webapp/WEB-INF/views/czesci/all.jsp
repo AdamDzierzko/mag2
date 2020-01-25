@@ -82,7 +82,7 @@
 // git init
 // git commit -m "first commit"
 // git remote add origin https://github.com/AdamDzierzko/mag2.git
-
+// git push -u origin master
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
