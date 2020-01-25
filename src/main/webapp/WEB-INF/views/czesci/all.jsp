@@ -80,6 +80,7 @@
 // repository https://github.com/AdamDzierzko/mag2.git
 // magazyn[master] - c:\magazyn\.git
 // git init
+// git add . 
 // git commit -m "first commit"
 // git remote add origin https://github.com/AdamDzierzko/mag2.git
 // git push -u origin master
