@@ -80,6 +80,7 @@
 // repository https://github.com/AdamDzierzko/mag2.git
 // magazyn[master] - c:\magazyn\.git
 // git init
+// git commit -m "first commit"
 //
 
 <!-- Modal -->
