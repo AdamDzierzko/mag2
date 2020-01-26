@@ -159,4 +159,6 @@
 	      }	)	
   	});
 
+  	</script>
+
 <%@include file="../tableFooter.jsp" %>
