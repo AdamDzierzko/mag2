@@ -79,6 +79,7 @@
 // path C:\Program Files\Java\jdk1.8.0_171 C:\Program Files\Java\jdk1.8.0_144\bin
 // repository https://github.com/AdamDzierzko/mag2.git
 // magazyn[master] - c:\magazyn\.git
+// tworzenie lokalnego repo
 // git init
 // git add . 
 // git commit -m "first commit"
