@@ -63,6 +63,9 @@
 </div>
 <!-- /#page-wrapper -->
 
+// *****************************************************
+//
+
 // integracja z maven
 // konieczny form z taglib
 // skonfigurać z maven 
