@@ -64,7 +64,7 @@
 <!-- /#page-wrapper -->
 
 // *****************************************************
-//
+// podłączenie repo z spring do github i tworzenie lokalnego repository
 
 // integracja z maven
 // konieczny form z taglib
