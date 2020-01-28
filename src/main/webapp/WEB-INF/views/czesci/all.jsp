@@ -102,7 +102,7 @@
       </div>
       <div class="modal-body">
       <c:forEach items="${czesci}" var="czesci">
-			<form id="user">
+			<form id="czesci">
 				<input  type="hidden" id="ida" name="id" value=${czesci.id}/>
 				<label for="name" id="name">Name</label>
 				<input   type="text" id="namea" name="name"/>
