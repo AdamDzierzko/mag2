@@ -68,7 +68,7 @@ public class CzesciController {
         czesciService.delete(id);
         return "redirect:/czesci/all";
     }
-
+/*
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable Long id) {
         model.addAttribute("czesci", czesciService.findOne(id));
@@ -90,7 +90,15 @@ public class CzesciController {
         czesciService.save(czesci);
         return "redirect:/czesci/all";
     }
-
+*/
+    
+    @PostMapping("/edit")
+    public void editPerform(Model model, @Valid Czesci czesci, @RequestParam long id,
+    @RequestParam String nazwa, @RequestParam int ilosc, @RequestParam User user,
+    @RequestParam TypCzesci typCzesci, BindingResult result) {
+    	
+    }
+    
     @GetMapping("/zmiana/{id}")
     public String zmiana(Model model, @PathVariable Long id) {
         model.addAttribute("czesci", czesciService.findOne(id));

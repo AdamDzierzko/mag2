@@ -117,8 +117,7 @@
 				
 				<label for="typCzescic" id="typCzescic">Typ czesci<label>
 				<input type="text" id="typCzescic" name="typCzescic"/>
-<!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  --> 
-    			
+<!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  -->    			
     			
 			 </form> 
 			</c:forEach>
