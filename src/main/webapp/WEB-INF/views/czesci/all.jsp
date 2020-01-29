@@ -111,9 +111,9 @@
 				<label for="iloscc" id="iloscc">Ilosc</label>
 				<input type="text" id="iloscc" name="ilosc"/>
 				
-//				<label for="userc" id="userc">Uzytkownik</label>
+				<label for="userc" id="userc">Uzytkownik</label>
 				<input type="text" id="userc" name="userc"/>
- //   			<select itemLabel="name" cssClass="form-control" items="${users}"></select>
+<!--     		<select itemLabel="name" cssClass="form-control" items="${users}"></select> --> 
 				
 //				<label path="typCzesci">Typ czesci<label>
  //   			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
