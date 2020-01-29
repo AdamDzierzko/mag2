@@ -115,8 +115,9 @@
 				<input type="text" id="userc" name="userc"/>
 <!--     		<select itemLabel="name" cssClass="form-control" items="${users}"></select> --> 
 				
-//				<label path="typCzesci">Typ czesci<label>
- //   			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
+				<label for="typCzescic" id="typCzescic">Typ czesci<label>
+				<input type="text" id="typCzescic" name="typCzescic"/>
+<!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  --> 
     			
     			
 			 </form> 
@@ -147,7 +148,7 @@
   	  	var nazwa = $('#nazwac').val();
   	  	var ilosc = $('#iloscc').val();
 		var user = $('#userc').val();
-		var typCzesci = $('#iloscc').val();
+		var typCzesci = $('#typCzescic').val();
   	  	
 		alert("aaaaaaaaaaaa")
 // 	  	var formData  = $("#user").serialize();
