@@ -103,23 +103,21 @@
       <div class="modal-body">
       <c:forEach items="${czesci}" var="czesci">
 			<form id="czesci">
-				<input  type="hidden" id="ida" name="id" value=${czesci.id}/>
-				<label for="name" id="name">Name</label>
-				<input   type="text" id="namea" name="name"/>
+				<input  type="hidden" id="ida" name="id" />
 				
-				
-				<input  type="hidden" id="idc" name="id"/>
 				<label for="nazwa" id="nazwa">Nazwa</label>
-				<input type="text" id="nazwac" name="nazwa"/>
+				<input   type="text" id="nazwac" name="nazwa"/>
+//				
+//				<label for="iloscc" id="iloscc">Ilosc</label>
+//				<input type="text" id="iloscc" name="ilosc"/>
 				
-				<label for="iloscc" id="iloscc">Ilosc</label>
-				<input type="text" id="iloscc" name="iloscc"/>
+//				<label for="userc" id="userc">Uzytkownik</label>
+ //   			<select itemLabel="name" cssClass="form-control" items="${users}"></select>
 				
-				<label for="userc" id="userc">Uzytkownik</label>
-    			<select itemLabel="name" cssClass="form-control" items="${users}"></select>
-				
-				<label path="typCzesci">Typ czesci<label>
-    			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
+//				<label path="typCzesci">Typ czesci<label>
+ //   			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
+    			
+    			
 			 </form> 
 			</c:forEach>
 					
@@ -138,14 +136,15 @@
 
   	<script>
   	$(".passingID").click(function () {        //hidden z formularza aby id pozstał bez zmian
-//  	    var ids = $(this).attr('data-id');
-//  	    $("#ida").val( ids );
+  	    var ids = $(this).attr('data-id');
+  	    $("#ida").val( ids );
   	});
   	
   	$('#btnSaveEdit').click(function () {	// wysłanie danych do controllera
   		         
   		var id = $('#ida').val();
-  	  	var name = $('#namea').val();
+  	  	var nazwa = $('#nazwac').val();
+  	  	var ilosc = $('#iloscc').val();
 		alert("aaaaaaaaaaaa")
 // 	  	var formData  = $("#user").serialize();
   	  		
@@ -157,7 +156,10 @@
 //			dataType: 'json',
 			data : {
 				id : id,
-				name : name
+				nazwa : nazwa
+				ilosc : ilosc
+				user : user
+				typCzesci : typCzesci
 				}
 		})
 	      .always(function() { $('#myModal').modal('hide'); 
