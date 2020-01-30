@@ -99,7 +99,6 @@ public class CzesciController {
     	
     	
     	czesci.setData(LocalDateTime.now());
-    	czesciService.save(czesci);
     	model.addAttribute("user", userService.findOne(id));
     	czesciService.save(czesci);
     	
