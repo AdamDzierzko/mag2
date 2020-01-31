@@ -93,6 +93,7 @@ public class CzesciController {
 */
     
     // nowe edit
+    //dd
     @PostMapping("/edit")
     public void editPerform(Model model, @Valid Czesci czesci, @RequestParam long id,
     @RequestParam String nazwa, @RequestParam int ilosc, @RequestParam User user,
