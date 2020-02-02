@@ -68,8 +68,7 @@ $(document).ready(function() {
                                     </div>
                                 </td>
                             </tr>
-                            </c:forEach>                     
-                        
+                            </c:forEach>     
                         </tbody>
                     </table>
                     <button id="id_get_time"> Get date</button>

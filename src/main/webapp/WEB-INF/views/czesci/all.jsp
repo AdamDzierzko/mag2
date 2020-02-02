@@ -63,6 +63,9 @@
 </div>
 <!-- /#page-wrapper -->
 
+// *****************************************************
+// podłączenie repo z spring do github i tworzenie lokalnego repository
+
 // integracja z maven
 // konieczny form z taglib
 // skonfigurać z maven 
@@ -99,24 +102,23 @@
       </div>
       <div class="modal-body">
       <c:forEach items="${czesci}" var="czesci">
-			<form id="user">
-				<input  type="hidden" id="ida" name="id" value=${czesci.id}/>
-				<label for="name" id="name">Name</label>
-				<input   type="text" id="namea" name="name"/>
+			<form id="czesci">
+				<input  type="hidden" id="ida" name="id" />
 				
-				
-				<input  type="hidden" id="idc" name="id"/>
 				<label for="nazwa" id="nazwa">Nazwa</label>
-				<input type="text" id="nazwac" name="nazwa"/>
+				<input   type="text" id="nazwac" name="nazwa"/>
 				
 				<label for="iloscc" id="iloscc">Ilosc</label>
-				<input type="text" id="iloscc" name="iloscc"/>
+				<input type="text" id="iloscc" name="ilosc"/>
 				
 				<label for="userc" id="userc">Uzytkownik</label>
-    			<select itemLabel="name" cssClass="form-control" items="${users}"></select>
+				<input type="text" id="userc" name="userc"/>
+<!--     		<select itemLabel="name" cssClass="form-control" items="${users}"></select> --> 
 				
-				<label path="typCzesci">Typ czesci<label>
-    			<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>
+				<label for="typCzescic" id="typCzescic">Typ czesci<label>
+				<input type="text" id="typCzescic" name="typCzescic"/>
+<!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  -->    			
+    			
 			 </form> 
 			</c:forEach>
 					
@@ -130,18 +132,23 @@
       </div>
     </div>
   </div>
+  
 </div>
 
   	<script>
   	$(".passingID").click(function () {        //hidden z formularza aby id pozstał bez zmian
-//  	    var ids = $(this).attr('data-id');
-//  	    $("#ida").val( ids );
+  	    var ids = $(this).attr('data-id');
+  	    $("#ida").val( ids );
   	});
   	
   	$('#btnSaveEdit').click(function () {	// wysłanie danych do controllera
   		         
   		var id = $('#ida').val();
-  	  	var name = $('#namea').val();
+  	  	var nazwa = $('#nazwac').val();
+  	  	var ilosc = $('#iloscc').val();
+		var user = $('#userc').val();
+		var typCzesci = $('#typCzescic').val();
+  	  	
 		alert("aaaaaaaaaaaa")
 // 	  	var formData  = $("#user").serialize();
   	  		
@@ -153,7 +160,10 @@
 //			dataType: 'json',
 			data : {
 				id : id,
-				name : name
+				nazwa : nazwa
+				ilosc : ilosc
+				user : user
+				typCzesci : typCzesci
 				}
 		})
 	      .always(function() { $('#myModal').modal('hide'); 
