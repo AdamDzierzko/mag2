@@ -99,6 +99,7 @@ public class CzesciController {
     @RequestParam String nazwa, @RequestParam int ilosc, @RequestParam User user,
     @RequestParam TypCzesci typCzesci, BindingResult result) {
     	 	
+    	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     	czesci.setData(LocalDateTime.now());
     	model.addAttribute("user", userService.findOne(id));
     	czesciService.save(czesci);
