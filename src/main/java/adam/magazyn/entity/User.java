@@ -10,9 +10,9 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "users")
 //    @ToString(exclude = {"budgets"})    // przerwanie aby się nie zapętlało przez sąsiednie tabele
 public class User {
@@ -26,30 +26,5 @@ public class User {
     @Column(length = 50, unique = true)
     private String name;
 
-	public User(long id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public User() {}
-    
-  
     
 }

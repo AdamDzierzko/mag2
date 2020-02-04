@@ -108,8 +108,8 @@
 				<label for="nazwa" id="nazwa">Nazwa</label>
 				<input   type="text" id="nazwac" name="nazwa"/>
 				<br>
-<!--  				
-				<label for="iloscc" id="iloscc">Ilosc</label>
+  				
+<!--				<label for="iloscc" id="iloscc">Ilosc</label>
 				<input type="text" id="iloscc" name="ilosc"/>
 				<br>
 				
@@ -126,7 +126,7 @@
 <!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  -->    			
     			
 			 </form> 
-<!--  		</c:forEach>    -->
+ <!-- 		</c:forEach>    -->
 					
 			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>		
 	
@@ -151,7 +151,7 @@
   		         
   		var id = $('#ida').val();
   	  	var nazwa = $('#nazwac').val();
- //  	  	var ilosc = $('#iloscc').val();
+//   	  	var ilosc = $('#iloscc').val();
 //		var user = $('#userc').val();
 //		var typCzesci = $('#typCzescic').val();
   	  	
