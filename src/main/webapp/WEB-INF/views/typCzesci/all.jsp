@@ -98,7 +98,7 @@
   	  		
 		$.ajax({
 			type : "POST",
-			url : "/user/edit",
+			url : "/typCzesci/edit",
 //			contentType : 'application/json',
 //			data : JSON.stringify(data),
 //			dataType: 'json',
