@@ -92,7 +92,7 @@
   	$('#btnSaveEdit').click(function () {	// wysłanie danych do controllera
   		         
   		var id = $('#ida').val();
-  	  	var name = $('#namea').val();
+  	  	var typ = $('#typa').val();
 
 // 	  	var formData  = $("#user").serialize();
   	  		
@@ -104,7 +104,7 @@
 //			dataType: 'json',
 			data : {
 				id : id,
-				name : name
+				typ : typ
 				}
 		})
 	      .always(function() { $('#myModal').modal('hide'); 
