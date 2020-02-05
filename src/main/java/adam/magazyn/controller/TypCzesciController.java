@@ -67,7 +67,7 @@ public class TypCzesciController {
  //       if (result.hasErrors()) {
  //           return "user/edit";
  //       }
-    	model.addAttribute("user", userService.findOne(id));
+    	model.addAttribute("typyCzesci", typCzesciService.findOne(id));
     	typCzesciService.save(typCzesci);
     }
     

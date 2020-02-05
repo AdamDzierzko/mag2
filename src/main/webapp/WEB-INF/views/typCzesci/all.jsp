@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../tableHeader.jsp" %>
