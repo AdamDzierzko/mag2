@@ -160,7 +160,7 @@
   	  		
 		$.ajax({
 			type : "POST",
-			url : "/user/edit",
+			url : "/czesci/edit",
 //			contentType : 'application/json',
 //			data : JSON.stringify(data),
 //			dataType: 'json',
