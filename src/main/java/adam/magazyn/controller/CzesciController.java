@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.Validator;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/czesci")
@@ -34,6 +35,15 @@ public class CzesciController {
 
     @Autowired
     Validator validator;
+    
+    @PostMapping("/gettime")
+    @ResponseBody
+//    public String getServerTime (@RequestParam long id) {
+        public String getServerTime () {
+    	System.out.println("-----------getServerTime-----------");
+    	Date d = new Date();
+    	return d.toString();
+    }
 
     @GetMapping("/add")
     public String addNew(Model model) {
@@ -97,15 +107,15 @@ public class CzesciController {
     @PostMapping("/edit")
     public void editPerform(Model model, @Valid Czesci czesci, 
     		@RequestParam long id,
-    		@RequestParam String nazwa, 
-    		@RequestParam int ilosc, @RequestParam User user,
-    		@RequestParam TypCzesci typCzesci,
+//    		@RequestParam String nazwa, 
+//    		@RequestParam int ilosc, @RequestParam User user,
+//    		@RequestParam TypCzesci typCzesci,
     		BindingResult result) {
     	 	
     	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     	
     	model.addAttribute("czesci", czesciService.findOne(id));
-//    	czesci.setData(LocalDateTime.now());
+    	czesci.setData(LocalDateTime.now());
     	czesciService.save(czesci);
     	
     }

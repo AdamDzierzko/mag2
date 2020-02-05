@@ -1,7 +1,37 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../tableHeader.jsp" %>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	//alert("good")
+	$('#id_get_time').click(function() {
+//		alert('naciśnięty')
+/*			var a = 5;
+		var b = "ad"
+		var data = {}
+		data["id"] = a
+		data["name"] = b
+		*/
+		
+		$.ajax({
+			url : '/czesci/gettime',
+			type: "post",
+			success : function (data) {
+				$("#id_time").html(data);
+				}
+			});
+		});
+	});
+</script>
+
 
 <div id="page-wrapper" style="min-height: 474px;">
     <div class="row">
@@ -53,6 +83,9 @@
                         </c:forEach>
                         </tbody>
                     </table>
+                    <button id="id_get_time"> Get date</button>
+                    <p id="id_time"></p>
+                    
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -62,6 +95,7 @@
     </div>
 </div>
 <!-- /#page-wrapper -->
+<button id="id_get_time"> Get date</button>
 
 // *****************************************************
 // podłączenie repo z spring do github i tworzenie lokalnego repository
@@ -109,19 +143,19 @@
 				<input   type="text" id="nazwac" name="nazwa"/>
 				<br>
   				
-<!--				<label for="iloscc" id="iloscc">Ilosc</label>
+				<label for="iloscc" id="iloscc">Ilosc</label>
 				<input type="text" id="iloscc" name="ilosc"/>
 				<br>
 				
 				<label for="userc" id="userc">Uzytkownik</label>
 				<input type="text" id="userc" name="userc"/>
-<    		<select itemLabel="name" cssClass="form-control" items="${users}"></select> 
+<!--    		<select itemLabel="name" cssClass="form-control" items="${users}"></select>  -->
 				<br>
 				
 				<label for="typCzescic" id="typCzescic">Typ czesci</label>
 				<input type="text" id="typCzescic" name="typCzescic"/>
 				<br>
-				-->
+				
 				
 <!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  -->    			
     			
@@ -151,9 +185,9 @@
   		         
   		var id = $('#ida').val();
   	  	var nazwa = $('#nazwac').val();
-//   	  	var ilosc = $('#iloscc').val();
-//		var user = $('#userc').val();
-//		var typCzesci = $('#typCzescic').val();
+   	  	var ilosc = $('#iloscc').val();
+		var user = $('#userc').val();
+		var typCzesci = $('#typCzescic').val();
   	  	
 		alert("aaaaaaaaaaaa")
 // 	  	var formData  = $("#user").serialize();
@@ -167,9 +201,9 @@
 			data : {
 				id : id,
 				nazwa : nazwa
-//				ilosc : ilosc
-//				user : user
-//				typCzesci : typCzesci
+				ilosc : ilosc
+				user : user
+				typCzesci : typCzesci
 				}
 		})
 	      .always(function() { $('#myModal').modal('hide'); 

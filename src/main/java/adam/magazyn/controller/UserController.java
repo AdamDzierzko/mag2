@@ -43,7 +43,8 @@ public class UserController {
     
     @PostMapping("/gettime")
     @ResponseBody
-    public String getServerTime (@RequestParam long id) {
+//    public String getServerTime (@RequestParam long id) {
+        public String getServerTime () {
     	System.out.println("-----------getServerTime-----------");
     	Date d = new Date();
     	return d.toString();
