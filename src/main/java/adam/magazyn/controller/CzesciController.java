@@ -146,6 +146,6 @@ public class CzesciController {
         czesciService.zmianaDaty(d, b);
 
         return "redirect:/czesci/all";
-    }
+    } 
 
 }

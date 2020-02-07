@@ -146,16 +146,16 @@ $(document).ready(function() {
 				<label for="iloscc" id="iloscc">Ilosc</label>
 				<input type="text" id="iloscc" name="ilosc"/>
 				<br>
-				
+<!-- 				
 				<label for="userc" id="userc">Uzytkownik</label>
 				<input type="text" id="userc" name="userc"/>
 <!--    		<select itemLabel="name" cssClass="form-control" items="${users}"></select>  -->
 				<br>
-				
+<!-- 				
 				<label for="typCzescic" id="typCzescic">Typ czesci</label>
 				<input type="text" id="typCzescic" name="typCzescic"/>
 				<br>
-				
+				-->
 				
 <!--  		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>  -->    			
     			
@@ -186,8 +186,8 @@ $(document).ready(function() {
   		var id = $('#ida').val();
   	  	var nazwa = $('#nazwac').val();
    	  	var ilosc = $('#iloscc').val();
-		var user = $('#userc').val();
-		var typCzesci = $('#typCzescic').val();
+//		var user = $('#userc').val();
+//		var typCzesci = $('#typCzescic').val();
   	  	
 		alert("aaaaaaaaaaaa")
 // 	  	var formData  = $("#user").serialize();
@@ -202,8 +202,8 @@ $(document).ready(function() {
 				id : id,
 				nazwa : nazwa
 				ilosc : ilosc
-				user : user
-				typCzesci : typCzesci
+//				user : user
+//				typCzesci : typCzesci
 				}
 		})
 	      .always(function() { $('#myModal').modal('hide'); 

@@ -17,7 +17,7 @@ public interface CzesciRepository extends JpaRepository<Czesci, Long> {
 
     @Modifying
     @Query("update Czesci c set c.ilosc = c.ilosc +:zmiana where c.id=:i")
-    void zmianaIlosci(@Param("zmiana") int zmiana, @Param("i") Long i);
+    void zmianaIlosci(@Param("zmiana") int zmiana, @Param("i") Long i); 
 
     @Modifying
     @Query("update Czesci c set c.data = :d where c.id=:i")
@@ -25,5 +25,5 @@ public interface CzesciRepository extends JpaRepository<Czesci, Long> {
 
     @Modifying
     @Query("update Czesci c set c.user = :u where c.id=:i")
-    void zmianaUser(@Param("u") User user, @Param("i") Long i);
+    void zmianaUser(@Param("u") User user, @Param("i") Long i); 
 }

@@ -68,7 +68,7 @@
       <div class="modal-body">
 			<form id="type">
 				<input  type="hidden" id="ida" name="id"/>
-				<label for="typ" id="typ">Typ</label>
+				<label for="typ" id="typ" >Typ</label>
 				<input   type="text" id="typa" name="typ"/>
 
 			 </form> 
