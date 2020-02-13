@@ -88,7 +88,7 @@
 // git commit -m "first commit"
 // git remote add origin https://github.com/AdamDzierzko/mag2.git
 // git push -u origin master
-// a
+// ag
 // 
 
 <!-- Modal -->
