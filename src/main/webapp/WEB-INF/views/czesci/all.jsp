@@ -98,7 +98,7 @@ $(document).ready(function() {
 <button id="id_get_time"> Get date</button>
 
 // *****************************************************
-// podłączenie repo z spring do github i tworzenie lokalnego repository aa
+// podłączenie repo z spring do github i tworzenie lokalnego repository 
 
 // integracja z maven
 // konieczny form z taglib
