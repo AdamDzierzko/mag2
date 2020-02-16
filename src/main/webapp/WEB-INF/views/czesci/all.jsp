@@ -125,8 +125,7 @@ $(document).ready(function() {
 // ki
 // agj
 // 
-=======
->>>>>>> branch 'master' of https://github.com/AdamDzierzko/mag2.git
+kkkuu
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
