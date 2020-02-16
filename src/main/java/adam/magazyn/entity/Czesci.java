@@ -37,5 +37,5 @@ public class Czesci {
     private User user;
 
     @ManyToOne
-    private TypCzesci typCzesci;
+    private TypCzesci typCzesci; 
 }

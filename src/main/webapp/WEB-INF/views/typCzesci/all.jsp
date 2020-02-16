@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../tableHeader.jsp" %>
@@ -34,6 +37,9 @@
                                     <a href="/typCzesci/delete/${type.id}">Delete</a>
                                     <span> / </span>
                                     <a href="/typCzesci/edit/${type.id}">Edit</a>
+                                    <div class="passingID" data-id="${type.id}">
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal</button>
+                                    </div>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -48,5 +54,67 @@
     </div>
 </div>
 <!-- /#page-wrapper -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle"><i class="fa fa-edit fa-fw"></i> Zmień nazwę użytkownika </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<form id="type">
+				<input  type="hidden" id="ida" name="id"/>
+				<label for="typ" id="typ" >Typ</label>
+				<input   type="text" id="typa" name="typ"/>
+
+			 </form> 
+			
+			<div id="ajax-errors" class="alert alert-danger" role="alert" style="display: none">Nie działa</div>
+			
+			
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+        <button type="button" class="btn btn-primary" id="btnSaveEdit">Save changes</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  	<script>
+  	$(".passingID").click(function () {        //hidden z formularza aby id pozstał bez zmian
+  	    var ids = $(this).attr('data-id');
+  	    $("#ida").val( ids );
+  	});
+  	
+  	$('#btnSaveEdit').click(function () {	// wysłanie danych do controllera
+  		         
+  		var id = $('#ida').val();
+  	  	var typ = $('#typa').val();
+
+// 	  	var formData  = $("#user").serialize();
+  	  		
+		$.ajax({
+			type : "POST",
+			url : "/typCzesci/edit",
+//			contentType : 'application/json',
+//			data : JSON.stringify(data),
+//			dataType: 'json',
+			data : {
+				id : id,
+				typ : typ
+				}
+		})
+	      .always(function() { $('#myModal').modal('hide'); 
+	      window.location.reload()		// przeladuje strone
+	      }	)	
+  	});
+ 	
+  	</script>
 
 <%@include file="../tableFooter.jsp" %>
