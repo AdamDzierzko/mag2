@@ -107,14 +107,15 @@ public class CzesciController {
     @PostMapping("/edit")
     public void editPerform(Model model, @Valid Czesci czesci, 
     		@RequestParam long id,
-//    		@RequestParam String nazwa, 
-//    		@RequestParam int ilosc, @RequestParam User user,
-//    		@RequestParam TypCzesci typCzesci,
+    		@RequestParam String nazwa, 
+    		@RequestParam int ilosc, 
+    		@RequestParam User user,
+    		@RequestParam TypCzesci typCzesci,
     		BindingResult result) {
     	 	
     	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     	
-    	model.addAttribute("czesci", czesciService.findOne(id));
+//    	model.addAttribute("czesci", czesciService.findOne(id));
     	czesci.setData(LocalDateTime.now());
     	czesciService.save(czesci);
     	
