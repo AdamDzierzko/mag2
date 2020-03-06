@@ -115,7 +115,7 @@ public class CzesciController {
     	 	
     	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     	
-//    	model.addAttribute("czesci", czesciService.findOne(id));
+    	model.addAttribute("czesci", czesciService.findOne(id));
     	czesci.setData(LocalDateTime.now());
     	czesciService.save(czesci);
     	

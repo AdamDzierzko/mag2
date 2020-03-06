@@ -122,11 +122,11 @@ $(document).ready(function() {
 // git commit -m "first commit"
 // git remote add origin https://github.com/AdamDzierzko/mag2.git
 // git push -u origin master
-// a
+// ab
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" id="exampleModalLongTitle"><i class="fa fa-edit fa-fw"></i> Zmień nazwę użytkownika </h3>
@@ -141,7 +141,7 @@ $(document).ready(function() {
 				<label for="nazwa" id="nazwa">Nazwa</label>
 				<input   type="text" id="nazwac" name="nazwa"/>
 				<br>
-  				
+   				
 				<label for="iloscc" id="iloscc">Ilosc</label>
 				<input type="text" id="iloscc" name="ilosc"/>
 				<br>
@@ -153,11 +153,9 @@ $(document).ready(function() {
 				
 				<label for="typCzescic" id="typCzescic">Typ czesci</label>
 				<input type="text" id="typCzescic" name="typCzescic"/>
-				<br>
-				
-				
- 		   	<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/>      			
-    			
+				<select itemLabel="typ" path="typCzesci" cssClass="form-control" items="${typCzesci}"/></select>        			
+    			<br>
+    		  		
 			 </form> 
   		</c:forEach>    
 					
